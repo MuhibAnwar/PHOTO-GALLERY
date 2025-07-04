@@ -106,6 +106,8 @@ export default function App() {
                 <Image
                   src={album.mainImage.src}
                   alt={album.mainImage.alt}
+                  width={400}
+                  height={400}
                   className="w-full object-cover rounded-xl"
                  // style={{ maxHeight: '300px' }} // Constraint height for the main image
                   onError={(e) => {
@@ -125,6 +127,8 @@ export default function App() {
                 <Image
                   src={album.secondaryImage.src}
                   alt={album.secondaryImage.alt}
+                  width={400}
+                  height={250}
                   className="w-full object-cover rounded-xl"
                 //  style={{ maxHeight: '180px' }} // Constraint height for the secondary image
                   onError={(e) => {
@@ -138,7 +142,7 @@ export default function App() {
         </section>
       </main>
 
-      {/* Tailwind CSS CDN for quick setup 
+      {/* Tailwind CSS CDN for quick setup */}
       <script src="https://cdn.tailwindcss.com"></script>
       <script dangerouslySetInnerHTML={{ __html: `
         tailwind.config = {
@@ -150,7 +154,7 @@ export default function App() {
             },
           },
         };
-      `}} /> */}
+      `}} /> 
     </div>
   );
 }

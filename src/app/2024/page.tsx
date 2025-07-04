@@ -261,6 +261,8 @@ export default function Album202223Page() {
               <Image
                 src={image.src}
                 alt={image.alt}
+                width={600}
+                height={400}
                 className="w-full h-auto object-cover rounded-lg"
                 onError={(e) => {
                   // Fallback for broken images
@@ -278,7 +280,7 @@ export default function Album202223Page() {
         </div>
       </main>
 
-      {/* Tailwind CSS CDN for quick setup 
+      {/* Tailwind CSS CDN for quick setup */}
       <script src="https://cdn.tailwindcss.com"></script>
       <script
         dangerouslySetInnerHTML={{
@@ -294,7 +296,7 @@ export default function Album202223Page() {
         };
       `,
         }}
-      />*/}
+      />
     </div>
   );
 }

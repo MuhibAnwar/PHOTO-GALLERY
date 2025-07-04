@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+
+import Image from 'next/image';
 
 // Define the structure for an album item as per the new design
 interface Album {
@@ -33,8 +34,7 @@ const albumsData: Album[] = [
 // Main App component for the Photo Gallery
 export default function App() {
   // Keeping state for selected category is no longer directly used in the new right section
-  // but can be repurposed if you reintroduce filtering or other interactive elements.
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'); // This state is now unused but kept for future expansion
+  // but can be repurposed if you reintroduce filtering or other interactive elements
 
   return (
     // Outer container for the entire page, dark background with subtle stars/clouds
@@ -56,11 +56,11 @@ export default function App() {
         <section className="flex flex-col justify-center items-center lg:items-start lg:w-1/3 p-4 lg:p-8 text-center lg:text-left bg-transparent">
           {/* Main title */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
-            Ayesha's Gallery 
+            Ayesha Gallery 
           </h1>
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Ayesha, this gallery is a small tribute to the beautiful memories we’ve created together. Each photo captures your smile, our laughter, and the love we share. I made this with all my heart to celebrate you and us. You’re my joy, my light, and my forever.
+            Ayesha, this gallery is a small tribute to the beautiful memories we have created together. Each photo captures your smile, our laughter, and the love we share. I made this with all my heart to celebrate you and us. You’re my joy, my light, and my forever.
           </p>
            <Link
       href="/2022-23"
@@ -84,7 +84,7 @@ export default function App() {
       href="/user"
       className="inline-block bg-white text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-200 transition duration-300 mt-4"
     >
-      Ayesha's Manual
+      Ayesha Manual
     </Link>
 </section>
          
@@ -103,7 +103,7 @@ export default function App() {
               
               {/* Main Image */}
               <div className="w-full h-auto mb-4 rounded-xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src={album.mainImage.src}
                   alt={album.mainImage.alt}
                   className="w-full object-cover rounded-xl"
@@ -122,7 +122,7 @@ export default function App() {
 
               {/* Secondary Image */}
               <div className="w-full h-auto rounded-xl overflow-hidden shadow-lg mb-4">
-                <img
+                <Image
                   src={album.secondaryImage.src}
                   alt={album.secondaryImage.alt}
                   className="w-full object-cover rounded-xl"
@@ -138,7 +138,7 @@ export default function App() {
         </section>
       </main>
 
-      {/* Tailwind CSS CDN for quick setup */}
+      {/* Tailwind CSS CDN for quick setup 
       <script src="https://cdn.tailwindcss.com"></script>
       <script dangerouslySetInnerHTML={{ __html: `
         tailwind.config = {
@@ -150,7 +150,7 @@ export default function App() {
             },
           },
         };
-      `}} />
+      `}} /> */}
     </div>
   );
 }

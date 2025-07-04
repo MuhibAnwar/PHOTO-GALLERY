@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 // Removed 'next/link' import as it's not resolved in this environment.
 // Using standard anchor tag for navigation.
 
@@ -117,13 +119,13 @@ export default function Album202223Page() {
             2022-23 Album
           </h1>
           {/* Back to Gallery button - using a standard anchor tag for navigation */}
-          <a href="/">
+          <Link  href="/">
             {" "}
             {/* Direct link to the main page */}
             <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-semibold transition duration-300 shadow-lg">
               Back to Gallery
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Image grid */}
@@ -133,7 +135,7 @@ export default function Album202223Page() {
               key={image.id}
               className="relative overflow-hidden rounded-lg shadow-lg group transform hover:scale-105 transition-transform duration-300 cursor-pointer border border-gray-700"
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-auto object-cover rounded-lg"
@@ -153,7 +155,8 @@ export default function Album202223Page() {
         </div>
       </main>
 
-      {/* Tailwind CSS CDN for quick setup */}
+      {/* Tailwind CSS CDN for quick setup npx tailwindcss init -p
+
       <script src="https://cdn.tailwindcss.com"></script>
       <script
         dangerouslySetInnerHTML={{
@@ -169,7 +172,7 @@ export default function Album202223Page() {
         };
       `,
         }}
-      />
+      />*/}
     </div>
   );
 }

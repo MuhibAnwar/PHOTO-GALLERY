@@ -101,7 +101,7 @@ export default function NotesPage() {
                       alt={image.alt}
                       width={600}
                       height={400}
-                      
+
                       className="w-full h-auto object-cover rounded-lg"
                       onError={(e) => {
                         e.currentTarget.src = `https://placehold.co/600x400/CCCCCC/333333?text=Image+Error`;
@@ -119,7 +119,7 @@ export default function NotesPage() {
         </div>
       </main>
 
-      {/* Tailwind CSS CDN for quick setup*/}
+      {/* Tailwind CSS CDN for quick setup
       <script src="https://cdn.tailwindcss.com"></script>
       <script dangerouslySetInnerHTML={{ __html: `
         tailwind.config = {
@@ -131,7 +131,7 @@ export default function NotesPage() {
             },
           },
         };
-      `}} />
+      `}} />*/}
     </div>
   );
 }
